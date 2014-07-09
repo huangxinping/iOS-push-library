@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="script.js"></script>
+<title>发送推送消息-单用户</title>
+</head>
+<body bgcolor="#99bbbb" marginwidth="300">
+	<h2 align="center">web管理端（单个）</h2>
+	<form name="pushMessage" method="post" action="../lib/apns.php">
+   	  <input name="action" type="hidden" value="pushMessageToSingle" />
+      	<textarea name="message" cols="50" rows="5" style="font-size:18px"></textarea>
+       	<br>
+        <fieldset>
+        	<label><input name="mode" type="checkbox" value="Production"/>正式环境推送</label>
+        </fieldset>
+        <br>
+		<fieldset>
+            <label>类型<input name="type" type="text" id="textfield" value="0" size="10" maxlength="1" /></label>
+            <input name="source" type="hidden" value="1" />
+            <label>用户<input name="user_token" type="text" id="textfield" value="15295521752" size="10" maxlength="11" /></label>
+		</fieldset>
+		<br><br><br>
+        <input type="submit" onclick='checkValid()' value="推送" />
+	</form>
+    <br><br>
+</body>
+</html>
